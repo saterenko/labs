@@ -18,7 +18,9 @@ main(int argc, char **argv)
     }
     srand(13);
     for (int i = 0; i < campaigns; i++) {
-        values[i] = rand() % 256;
+        for (int j = 0; j < nels; j++) {
+            values[i * nels + j] = rand() % 256;
+        }
     }
 
     /*  test 1, bruteforce  */
